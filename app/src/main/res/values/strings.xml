@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">Text Scanner and Converter</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_settings">Settings</string>
+    <string name="menu_log_in">Log In</string>
+    <string name="menu_register">Register</string>
+    <string name="menu_log_out">Log Out</string>
+    <string name="convert_to_text">Convert to Text</string>
+    <string name="image_preview">Image Preview</string>
+    <string name="edit_text">Edit Text</string>
+    <string name="save_image">Save Image Only</string>
+    <string name="title_activity_text_recognition">Text Recognition</string>
+    <string name="title_activity_translation">Translation</string>
+    <string name="menu_tools">Tools</string>
+    <string name="title_activity_log_in">LogInActivity</string>
+    <string name="title_activity_registration">RegistrationActivity</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_send">Send</string>
+    <string name="title_activity_password">PasswordActivity</string>
+    <string name="title_activity_profile">ProfileActivity</string>
+    <string name="title_activity_update_password">UpdatePassword</string>
+    <string name="title_activity_update_profile">UpdateProfile</string>
+    <string name="title_activity_pdf_viewing">PdfViewingActivity</string>
+    <string name="save_image_and_text">Save Image and Text</string>
+    <string name="save_text">Save Text Only</string>
+    <string name="pronounce">Pronounce</string>
+    <string name="profile">Profile</string>
+    <string name="upload">Upload</string>
+    <string name="title_activity_text_viewing">TextViewingActivity</string>
+    <string name="save">Save</string>
+</resources>
