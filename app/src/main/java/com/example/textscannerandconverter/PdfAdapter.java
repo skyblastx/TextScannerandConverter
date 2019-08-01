@@ -93,4 +93,6 @@ public class PdfAdapter extends RecyclerView.Adapter<PdfAdapter.ViewHolder> {
     public int getItemCount() {
         return pdfs.size();
     }
+
+    public boolean isEmpty() { return (pdfs.size() == 0); }
 }

@@ -834,7 +834,10 @@ public class TextRecognition extends AppCompatActivity
                 }
             }
         });
-        dialog.create().show(); //show dialog
+        AlertDialog finalDialog = dialog.create();
+
+        finalDialog.setCanceledOnTouchOutside(false);
+        finalDialog.show(); //show dialog
     }
 
     private void pickGallery() {

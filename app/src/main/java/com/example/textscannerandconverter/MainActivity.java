@@ -15,6 +15,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.cardview.widget.CardView;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -50,10 +51,12 @@ public class MainActivity extends AppCompatActivity
     private FirebaseStorage firebaseStorage;
     private TextView usernameView, emailView;
     private ImageView profilePicView;
+    private CardView instruction;
 
     private RecyclerView PDFView;
     private Button pdfName;
     private ArrayList<PDF> pdf;
+    private PdfAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,6 +67,7 @@ public class MainActivity extends AppCompatActivity
         mHeaderView = mNavigationView.getHeaderView(0);
         PDFView = (RecyclerView) findViewById(R.id.PDFView);
         pdfName = (Button) findViewById(R.id.pdf_name);
+        instruction = (CardView)findViewById(R.id.instruction);
 
         usernameView = (TextView) mHeaderView.findViewById(R.id.usernameView);
         emailView = (TextView) mHeaderView.findViewById(R.id.emailView);
@@ -120,6 +124,8 @@ public class MainActivity extends AppCompatActivity
                 }
             });
         }
+
+
     }
 
     @Override
@@ -148,7 +154,11 @@ public class MainActivity extends AppCompatActivity
                 }
             }
             pdf = PDF.createPDFList(fileList.length, fileName, filePath);
-            PdfAdapter adapter = new PdfAdapter(pdf);
+            adapter = new PdfAdapter(pdf);
+        }
+
+        if(!adapter.isEmpty()) {
+            instruction.setVisibility(View.GONE);
             PDFView.setAdapter(adapter);
             PDFView.setLayoutManager(new LinearLayoutManager(this));
         }
